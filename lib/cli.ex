@@ -26,8 +26,11 @@ defmodule Exslack.CLI do
   end
 
   @commands %{
-    "quit" => "Quits Exslack",
-    "login" => "Logs in to slack using an app token or legacy token"
+    "login" => "Logs in to slack using an app token or legacy token",
+    "status" => "Set your fancy status message",
+    "away" => "Set yourself as away",
+    "dnd" => "Set yourself to do-not-disturb",
+    "quit" => "Quits Exslack"
   }
 
   defp receive_command(slack \\ nil) do
@@ -35,7 +38,7 @@ defmodule Exslack.CLI do
     |> String.trim()
     |> String.downcase()
     |> String.split(" ")
-    |> IO.inspect()
+    # |> IO.inspect()
     |> execute_command(slack)
   end
 
@@ -63,13 +66,8 @@ defmodule Exslack.CLI do
     receive_command(slack)
   end
 
-  defp process_place_params(params) do
-    [x, y, facing] = params |> Enum.join("") |> String.split(",") |> Enum.map(&String.trim/1)
-    {String.to_integer(x), String.to_integer(y), String.to_atom(facing)}
-  end
-
   defp print_help_message do
-    IO.puts("\nExslack can do the following things:\n")
+    IO.puts("\nExslack can do things:\n")
 
     @commands
     |> Enum.map(fn {command, description} -> IO.puts("  #{command} - #{description}") end)

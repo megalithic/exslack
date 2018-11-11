@@ -26,5 +26,9 @@ exslack
 
 ##### Options:
 
-- `login` - using a legacy or app token ([more info on that]())
-- `quit` - quits the thing
+```sh
+login   Login with a legacy or app token
+status  Set a fancy status message
+away    Toggle your "away" status
+dnd     Toggle yourself as do-not-disturb
+```
