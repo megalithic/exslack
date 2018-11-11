@@ -27,6 +27,8 @@ defmodule Exslack.MixProject do
   defp deps do
     [
       {:credo, "~> 0.9.0-rc1", only: :dev, runtime: false},
+      {:gun, "~> 1.3"},
+      {:poison, "~> 3.1"},
       {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false}
     ]
