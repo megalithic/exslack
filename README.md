@@ -1,20 +1,30 @@
 # Exslack
-## A super basic command-line interface tool to interact with [Slack's (RTM) WSS API](https://api.slack.com/rtm).
 
-#### To do dev things:
+### Command-line interface tool to interact with [Slack's (RTM) WSS API](https://api.slack.com/rtm).
+
+#### Dev things:
+
+Install deps and build:
 
 ```sh
 mix deps.get
 mix escript.build
+chmod +x exslack
 ```
 
-#### To run the thing:
+Tests:
 
 ```sh
-./exslack
+mix tests
 ```
 
-##### There are a number of options, the primary ones are:
+#### Use the thing:
+
+```sh
+exslack
+```
+
+##### Options:
 
 - `login` - using a legacy or app token ([more info on that]())
 - `quit` - quits the thing
