@@ -2,7 +2,7 @@
 
 A command-line interface tool to interact with [Slack's (RTM) API](https://api.slack.com/rtm).
 
-#### Developing things
+#### For developing things
 
 Prerequisites:
 
@@ -34,7 +34,7 @@ Tests:
 mix tests
 ```
 
-#### Using things
+#### For using things
 
 Grab the prebuilt binary if you don't want to build it yourself:
 
