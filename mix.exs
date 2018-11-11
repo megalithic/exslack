@@ -6,7 +6,10 @@ defmodule Exslack.MixProject do
       app: :exslack,
       version: "0.1.0",
       elixir: "~> 1.7",
-      escript: [main_module: Exslack.CLI],
+      escript: [
+        path: "build/exslack",
+        main_module: Exslack.CLI
+      ],
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps()

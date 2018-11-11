@@ -1,15 +1,31 @@
-# Exslack
+## Exslack
 
-### Command-line interface tool to interact with [Slack's (RTM) WSS API](https://api.slack.com/rtm).
+A command-line interface tool to interact with [Slack's (RTM) API](https://api.slack.com/rtm).
 
-#### Dev things:
+#### Developing things
+
+Prerequisites:
+
+```sh
+# macOS
+brew install elixir
+
+# other OS
+# visit https://elixir-lang.org/install.html#distributions
+```
+
+`git` things:
+
+```sh
+git clone https://github.com/megalithic/exslack.git
+```
 
 Install deps and build:
 
 ```sh
 mix deps.get
 mix escript.build
-chmod +x exslack
+chmod +x build/exslack
 ```
 
 Tests:
@@ -18,13 +34,21 @@ Tests:
 mix tests
 ```
 
-#### Use the thing:
+#### Using things
+
+Grab the prebuilt binary if you don't want to build it yourself:
 
 ```sh
-exslack
+curl -OL https://raw.githubusercontent.com/megalithic/exslack/master/build/exslack
 ```
 
-##### Options:
+Execute commands:
+
+```sh
+exslack <command> <params>
+```
+
+##### Commands:
 
 ```sh
 login   Login with a legacy or app token
