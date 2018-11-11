@@ -23,7 +23,6 @@ defmodule Exslack.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_cli, "~> 0.1.0"},
       {:credo, "~> 0.9.0-rc1", only: :dev, runtime: false},
       {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false}
