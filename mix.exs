@@ -19,7 +19,7 @@ defmodule Exslack.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :httpoison]
     ]
   end
 
@@ -29,6 +29,7 @@ defmodule Exslack.MixProject do
       {:credo, "~> 0.9.0-rc1", only: :dev, runtime: false},
       {:gun, "~> 1.3"},
       {:poison, "~> 3.1"},
+      {:httpoison, "~> 1.4"},
       {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false}
     ]
